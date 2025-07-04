@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de confidentialité - Kiff-Kach</title>
+    <title>Privacy Policy - Kiff-Kach</title>
+    <meta name="description" content="Kiff-Kach Privacy Policy - Politique de confidentialité">
     <style>
         * {
             margin: 0;
@@ -15,302 +16,247 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 500px;
             background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            font-size: 3em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #3498db, #9b59b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         h1 {
             color: #2c3e50;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-            text-align: center;
-        }
-
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
             margin-bottom: 15px;
-            font-size: 1.5em;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
+            font-size: 1.8em;
+            font-weight: 600;
         }
 
-        h3 {
-            color: #2c3e50;
-            margin-top: 20px;
-            margin-bottom: 10px;
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        .language-selection {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .language-option {
+            display: block;
+            text-decoration: none;
+            padding: 20px 30px;
+            border-radius: 15px;
             font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
         }
 
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
+        .language-option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
         }
 
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
+        .language-option:hover::before {
+            left: 100%;
         }
 
-        li {
-            margin-bottom: 8px;
+        .french {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
         }
 
-        .highlight {
-            background-color: #e8f4f8;
+        .french:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(52, 152, 219, 0.4);
+        }
+
+        .english {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+        }
+
+        .english:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(231, 76, 60, 0.4);
+        }
+
+        .flag {
+            font-size: 1.5em;
+            margin-right: 15px;
+        }
+
+        .auto-redirect {
+            margin-top: 30px;
             padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            color: #7f8c8d;
+            font-size: 0.9em;
             border-left: 4px solid #3498db;
-            margin: 20px 0;
-            border-radius: 4px;
         }
 
-        .contact-info {
-            background-color: #f1f8ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .last-updated {
-            text-align: center;
-            color: #7f8c8d;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #7f8c8d;
-        }
-
-        .mobile-friendly {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .container {
-                padding: 20px;
+                padding: 40px 30px;
                 margin: 10px;
             }
 
+            .logo {
+                font-size: 2.5em;
+            }
+
             h1 {
-                font-size: 2em;
+                font-size: 1.5em;
             }
 
-            h2 {
-                font-size: 1.3em;
-            }
-
-            .mobile-friendly {
-                display: block;
+            .language-option {
+                padding: 18px 25px;
+                font-size: 1.1em;
             }
         }
 
-        .section {
-            margin-bottom: 30px;
+        .loading {
+            display: none;
+            margin-top: 20px;
         }
 
-        .important {
-            font-weight: bold;
-            color: #e74c3c;
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
         }
 
-        .consent-box {
-            background-color: #d5f4e6;
-            border: 1px solid #27ae60;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-
-        .rights-list {
-            background-color: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Politique de confidentialité</h1>
-        <p class="last-updated"><strong>Dernière mise à jour :</strong> 03 juillet 2025</p>
-
-        <div class="section">
-            <h2>1. Qui nous sommes</h2>
-            <p><strong>Kiff-kach</strong> est une application de suivi financier personnel développée par <strong> MedBen </strong>. Cette politique explique comment nous collectons, utilisons et protégeons vos données personnelles.</p>
+        <div class="logo">Kiff-Kach</div>
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">Choose your preferred language<br>Choisissez votre langue préférée</p>
+        
+        <div class="language-selection">
+            <a href="./fr/" class="language-option french" onclick="setLanguagePreference('fr')">
+                <span class="flag">🇫🇷</span>
+                <span>Français</span>
+            </a>
             
-            <div class="contact-info">
-                <p><strong>Contact :</strong> <a href="mailto:kiffkach@gmail.com">kiffkach@gmail.com</a></p>
-            </div>
+            <a href="./en/" class="language-option english" onclick="setLanguagePreference('en')">
+                <span class="flag">🇺🇸</span>
+                <span>English</span>
+            </a>
         </div>
 
-        <div class="section">
-            <h2>2. Données que nous collectons</h2>
-            
-            <h3>Données d'inscription</h3>
-            <ul>
-                <li><strong>Adresse e-mail</strong> : pour créer votre compte et vous contacter</li>
-                <li><strong>Mot de passe</strong> : chiffré et sécurisé</li>
-                <li><strong>Informations de connexion sociale</strong> : si vous utilisez Google/Apple (nom, email, photo de profil)</li>
-            </ul>
-
-            <h3>Données financières</h3>
-            <ul>
-                <li><strong>Transactions</strong> : montants, catégories, dates (stockées localement sur votre appareil)</li>
-                <li><strong>Budgets et objectifs</strong> : vos paramètres financiers personnels</li>
-                <li><strong>Préférences</strong> : paramètres de l'application</li>
-            </ul>
-
-            <h3>Données de consentement</h3>
-            <ul>
-                <li><strong>Préférences e-mail</strong> : votre choix concernant les communications marketing</li>
-                <li><strong>Date de consentement</strong> : horodatage de vos choix</li>
-                <li><strong>Source du consentement</strong> : où vous avez donné votre accord</li>
-            </ul>
+        <div class="auto-redirect">
+            <strong>Auto-detection:</strong> We'll remember your choice for future visits<br>
+            <strong>Détection automatique:</strong> Nous mémoriserons votre choix pour vos prochaines visites
         </div>
 
-        <div class="section">
-            <h2>3. Comment nous utilisons vos données</h2>
-            
-            <h3>Fonctionnement de l'application</h3>
-            <ul>
-                <li>Fournir les services de suivi financier</li>
-                <li>Synchroniser vos données entre appareils</li>
-                <li>Améliorer l'expérience utilisateur</li>
-            </ul>
-
-            <div class="consent-box">
-                <h3>Communications (avec votre consentement explicite)</h3>
-                <ul>
-                    <li><strong>Conseils financiers</strong> : astuces pour optimiser votre budget</li>
-                    <li><strong>Mises à jour produit</strong> : nouvelles fonctionnalités</li>
-                    <li><strong>Contenu éducatif</strong> : articles et guides financiers</li>
-                </ul>
-                <p><strong>Fréquence maximale</strong> : 2 e-mails par semaine</p>
-                <p><strong>Désabonnement</strong> : possible à tout moment</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>4. Partage de données</h2>
-            
-            <div class="highlight">
-                <p class="important">Nous ne vendons JAMAIS vos données personnelles.</p>
-            </div>
-
-            <h3>Prestataires de services</h3>
-            <ul>
-                <li><strong>Firebase (Google)</strong> : stockage sécurisé des données</li>
-                <li><strong>Mailchimp</strong> : gestion des e-mails marketing (uniquement si vous y consentez)</li>
-                <li><strong>Fournisseurs d'authentification</strong> : Google, Apple (pour la connexion)</li>
-            </ul>
-
-            <h3>Situations légales</h3>
-            <p>Nous pouvons divulguer vos données si :</p>
-            <ul>
-                <li>Requis par la loi</li>
-                <li>Nécessaire pour protéger nos droits</li>
-                <li>Avec votre consentement explicite</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>5. Sécurité des données</h2>
-            
-            <h3>Mesures techniques</h3>
-            <ul>
-                <li><strong>Chiffrement</strong> : toutes les données sont chiffrées en transit et au repos</li>
-                <li><strong>Authentification</strong> : accès sécurisé par mot de passe ou biométrie</li>
-                <li><strong>Surveillance</strong> : monitoring continu des accès</li>
-            </ul>
-
-            <h3>Mesures organisationnelles</h3>
-            <ul>
-                <li>Accès limité aux données par le personnel</li>
-                <li>Formation régulière sur la sécurité</li>
-                <li>Audits de sécurité périodiques</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>6. Vos droits</h2>
-            
-            <div class="rights-list">
-                <h3>Droits RGPD</h3>
-                <ul>
-                    <li><strong>Droit d'accès</strong> : demander une copie de vos données</li>
-                    <li><strong>Droit de rectification</strong> : corriger vos données</li>
-                    <li><strong>Droit à l'effacement</strong> : supprimer votre compte</li>
-                    <li><strong>Droit à la portabilité</strong> : exporter vos données</li>
-                    <li><strong>Droit d'opposition</strong> : refuser le traitement marketing</li>
-                    <li><strong>Droit de retrait</strong> : annuler votre consentement</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>7. Rétention des données</h2>
-            <ul>
-                <li><strong>Compte actif</strong> : données conservées tant que votre compte existe</li>
-                <li><strong>Compte supprimé</strong> : données effacées sous 30 jours</li>
-                <li><strong>Données marketing</strong> : supprimées immédiatement après désabonnement</li>
-                <li><strong>Logs de sécurité</strong> : conservés 12 mois maximum</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>8. Mineurs</h2>
-            <p>Notre application n'est pas destinée aux moins de 16 ans. Si vous avez moins de 16 ans, n'utilisez pas notre service.</p>
-        </div>
-
-        <div class="section">
-            <h2>9. Modifications</h2>
-            <p>Nous vous informerons des modifications importantes par :</p>
-            <ul>
-                <li>Notification dans l'application</li>
-                <li>E-mail (si vous y avez consenti)</li>
-                <li>Mise à jour de la date en haut de cette page</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>10. Contact</h2>
-            <div class="contact-info">
-                <p><strong>E-mail :</strong> <a href="mailto:kiffkach@gmail.com">kiffkach@gmail.com</a></p>
-                <p><strong>Courrier :</strong>19 avenue annakhil, hay riad, rabat, maroc</p>
-            </div>
-            
-            <h3>Réclamations</h3>
-            <p>Vous pouvez déposer une réclamation auprès de la CNIL (France) ou de votre autorité de protection des données locale.</p>
-        </div>
-
-        <div class="section">
-            <h2>11. Consentement</h2>
-            <div class="consent-box">
-                <p>En utilisant notre application, vous acceptez cette politique de confidentialité.</p>
-                <p><strong>Pour les communications marketing</strong> : votre consentement est demandé séparément et peut être retiré à tout moment.</p>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>Cette politique est rédigée en français. En cas de divergence avec d'autres versions, la version française prévaut.</p>
-            <p>© 2025 Kiff-kach. Tous droits réservés.</p>
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Redirecting... / Redirection...</p>
         </div>
     </div>
+
+    <script>
+        // Function to get browser language
+        function getBrowserLanguage() {
+            const lang = navigator.language || navigator.userLanguage;
+            return lang.toLowerCase().startsWith('fr') ? 'fr' : 'en';
+        }
+
+        // Function to set language preference
+        function setLanguagePreference(lang) {
+            localStorage.setItem('preferredLanguage', lang);
+            document.getElementById('loading').style.display = 'block';
+        }
+
+        // Function to get stored language preference
+        function getStoredLanguage() {
+            return localStorage.getItem('preferredLanguage');
+        }
+
+        // Auto-redirect logic
+        function autoRedirect() {
+            const storedLang = getStoredLanguage();
+            const browserLang = getBrowserLanguage();
+            const targetLang = storedLang || browserLang;
+
+            // Only auto-redirect if user has been here before (has stored preference)
+            if (storedLang) {
+                setTimeout(() => {
+                    window.location.href = `./${targetLang}/`;
+                }, 1000);
+                document.getElementById('loading').style.display = 'block';
+                document.querySelector('.language-selection').style.opacity = '0.5';
+            }
+        }
+
+        // Check if we should auto-redirect when page loads
+        window.addEventListener('load', () => {
+            // Small delay to show the page briefly before potential redirect
+            setTimeout(autoRedirect, 500);
+        });
+
+        // Handle back button navigation
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                document.getElementById('loading').style.display = 'none';
+                document.querySelector('.language-selection').style.opacity = '1';
+            }
+        });
+    </script>
 </body>
 </html>
